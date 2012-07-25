@@ -19,6 +19,7 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
 
+  gem 'twitter-bootstrap-rails'
 end
 
 gem 'jquery-rails'
@@ -38,3 +39,8 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 
+gem 'omniauth'
+
+group :development, :test do
+  gem 'rspec-rails'
+end
