@@ -48,7 +48,7 @@
           <div class="container nav-collapse">
             <ul class="nav pull-right">
               <% if current_user %>
-                <li><%= link_to("Sign out", :logout_path) %>
+                <li><%= link_to("Sign out", :signout) %>
               <% else %>
                 <li><%= link_to("Sign in", "/auth/twitter") %>
               <% end %>
