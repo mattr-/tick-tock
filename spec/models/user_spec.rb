@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe User do
 
-  describe "#create_from_omniauth" do
+  it "should create users from omniauth data" do
     auth = { :provider => 'twitter',
              :uid => '123434',
              :info => {
