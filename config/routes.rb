@@ -2,6 +2,11 @@ TickTock::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
+
+  match "/auth/:provider/callback" => "sessions#create"
+  match "/signout" => "sessions#destroy", :as => :signout
+  match "/timeline" => "timeline#tweets", :as => :timeline
+
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
