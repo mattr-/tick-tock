@@ -5,13 +5,17 @@ class TimelineController < ApplicationController
   end
 
   def tweets
-    @tweets = Flitter.timeline(current_user)
+    client = Flitter.new(current_user)
+    @tweets = client.timeline
   end
 
   def post_tweet
+    client = Flitter.new(current_user)
+
     text = params[:tweet_text]
-    Flitter.post_tweet(current_user, text)
-    flash[:notice] = "Tweet posted succesfully! Better refresh!"
+    client.post_tweet(current_user, text)
+
+    flash[:notice] = "Tweet posted succesfully!"
     redirect_to timeline_path 
   end
 end
