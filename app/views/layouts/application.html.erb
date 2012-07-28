@@ -59,6 +59,12 @@
     </div>
 
     <div class="container">
+      <% flash.each do |name, msg| %>
+        <div class="alert alert-info">
+          <a href="" class="close" data-dismiss="alert">x</a>
+          <%= msg %>
+        </div>
+      <% end %>
       <%= yield %>
     </div> <!-- /container -->
 
