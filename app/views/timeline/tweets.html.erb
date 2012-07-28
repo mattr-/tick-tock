@@ -1,1 +1,23 @@
-This is where the tweets would go if they were loaded
+  <div class="row">
+    <div class="span7 offset2">
+      <%= form_tag("post_tweet") do -%>
+        <%= label_tag(:tweet_text, "Tweet something!") -%>
+        <%= text_area_tag(:tweet_text, "", :size => "40x6",
+                                           :class => "span7") -%>
+        <div class='actions pull-right'>
+          <%= submit_tag 'Tweet', :class => "btn btn-primary" -%>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+<% @tweets.each do |t| %>
+  <div class="row">
+
+    <div class="span7 offset2">
+      <div><%= t.from_user %></div>
+        <%= t.text %>
+    </div>
+  </div>
+<% end %>
+

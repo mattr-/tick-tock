@@ -6,6 +6,7 @@ TickTock::Application.routes.draw do
   match "/auth/:provider/callback" => "sessions#create"
   match "/signout" => "sessions#destroy", :as => :signout
   match "/timeline" => "timeline#tweets", :as => :timeline
+  match "/post_tweet" => "timeline#post_tweet", :as => :post_tweet
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
