@@ -11,3 +11,19 @@
  *= require_self
  *= require_tree .
  */
+
+form label {
+  font-weight: bold
+}
+
+div.tweet {
+  margin-bottom: 1em;
+}
+
+h4 span {
+  color: #bbb;
+}
+
+img.profile {
+  margin-right: 10px;
+

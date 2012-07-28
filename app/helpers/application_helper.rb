@@ -1,3 +1,5 @@
+require 'twitter-text'
+
 module ApplicationHelper
-  include Twitter::AutoLink
+  include Twitter::Autolink
 end

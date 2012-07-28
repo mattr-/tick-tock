@@ -14,9 +14,12 @@
 <% @tweets.each do |t| %>
   <div class="row">
 
-    <div class="span7 offset2">
-      <div><%= t.from_user %></div>
-        <%= t.text %>
+    <div class="span7 offset2 tweet">
+      <img src="<%= t.user.profile_image_url %>" class="profile pull-left" />
+      <div class="details">
+        <h4><%= t.user.name %><span>&nbsp;@<%= t.from_user %></span></h4>
+        <%= auto_link(t.text).html_safe %>
+      </div>
     </div>
   </div>
 <% end %>
