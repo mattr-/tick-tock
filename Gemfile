@@ -41,6 +41,9 @@ gem 'jquery-rails'
 
 gem 'omniauth-twitter'
 
+gem 'twitter'
+gem 'twitter-text'
+
 group :development, :test do
   gem 'rspec-rails'
 end
